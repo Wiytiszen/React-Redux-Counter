@@ -1,0 +1,9 @@
+.container{
+  margin-top: 30px;
+  display: flex;
+  flex:1;
+}
+
+button,.value{
+  padding: 10px;
+}
