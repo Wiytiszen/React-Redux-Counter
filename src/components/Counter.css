@@ -1,9 +1,18 @@
-.container{
-  margin-top: 30px;
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.counter-container{
   display: flex;
   flex:1;
+  width: 40%;
+  justify-content: center;
 }
-
-button,.value{
-  padding: 10px;
+.value,button {
+  
+  padding :20px;
+}
+button{
+  border-radius: 4px;
 }
