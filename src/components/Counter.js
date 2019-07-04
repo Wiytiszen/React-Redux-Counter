@@ -2,11 +2,11 @@
 import {connect} from 'react-redux';
 import React from 'react';
 import './Counter.css';
+import PropTypes from 'prop-types';
 
 import { setAdd,setSubtract,setReset } from '../actions/index';
 
 class Counter extends React.Component{
-  
   render(){
     const handleAdd = () =>{
       this.props.handleAdd();
@@ -19,16 +19,24 @@ class Counter extends React.Component{
     }
 
     return(
-      <div className ="counter-container">
-        <button onClick ={handleSubtract}> -1 </button>
-        <div className ="value">{this.props.count}</div>
-        <button onClick ={handleAdd}> +1 </button>
+      <div className ="container">
+        <div className ="counter">
+          <button onClick ={handleSubtract}> -1 </button>
+          <div className ="value">{this.props.count}</div>
+          <button onClick ={handleAdd}> +1 </button>
+        </div>
         <div className="reset">
           <button className="btn-reset" onClick ={handleReset}>Reset</button>
         </div>
       </div>
     )
   }
+}
+Counter.protoType = {
+  count :PropTypes.number,
+  handleSubtract: PropTypes.function,
+  handleAdd: PropTypes.function,
+  handleReset: PropTypes.function
 }
 /*  //     STATE ////
 
