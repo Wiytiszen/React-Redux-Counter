@@ -10,7 +10,11 @@ export const setSubtract = (/*arguments*/) =>(
     type: 'SUBTRACT'
   }
 );
-
+export const setReset = () =>(
+  {
+    type: 'RESET'
+  }
+);
 
 // Redux also suggest defining constants for
 // your action types.
@@ -20,4 +24,8 @@ export const add = {
 
 export const subtract = {
   SUBTRACT: 'SUBTRACT'
+ };
+
+ export const reset = {
+  RESET: 'RESET'
  };

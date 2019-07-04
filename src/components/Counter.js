@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import React from 'react';
 import './Counter.css';
 
-import { setAdd,setSubtract } from '../actions/index';
+import { setAdd,setSubtract,setReset } from '../actions/index';
 
 class Counter extends React.Component{
   
@@ -13,12 +13,19 @@ class Counter extends React.Component{
     };
     const handleSubtract =()=>{ 
       this.props.handleSubtract();
-  };
+    };
+    const handleReset = () =>{
+      this.props.handleReset();
+    }
+
     return(
       <div className ="counter-container">
         <button onClick ={handleSubtract}> -1 </button>
         <div className ="value">{this.props.count}</div>
         <button onClick ={handleAdd}> +1 </button>
+        <div className="reset">
+          <button className="btn-reset" onClick ={handleReset}>Reset</button>
+        </div>
       </div>
     )
   }
@@ -41,7 +48,8 @@ const mapStateToProps = (state,/*OwnProps*/) =>{
 const mapDispatchToProps = (dispatch,/*own props */) =>{
   return({
 		handleAdd: () => dispatch(setAdd()),
-		handleSubtract: () => dispatch(setSubtract())
+		handleSubtract: () => dispatch(setSubtract()),
+		handleReset: () => dispatch(setReset())
 	});
 }
 

@@ -6,6 +6,7 @@
 .counter-container{
   display: flex;
   flex:1;
+  flex-wrap: wrap;
   width: 40%;
   justify-content: center;
 }
@@ -15,4 +16,16 @@
 }
 button{
   border-radius: 4px;
+}
+.reset{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.btn-reset{
+  width: 100%;
+  margin:15px;
+  background:#48f542;
+  text-align: center;
+  justify-content: center;
 }
